@@ -1,0 +1,38 @@
+#Diccionario
+
+#Se hace un diccionario con los conceptos que se deseen
+my_dic={"Linux":"sistema operativo semejante a Unix, de código abierto y desarrollado por una comunidad, para computadoras, servidores, mainframes, dispositivos móviles y dispositivos embebidos.",
+        "Windows":"conjunto de programas que permiten manejar tanto los recursos físicos (hardware) como los programas (software) en una computadora. El sistema operativo es el programa principal que debe tener una computadora y sirve de base para que se puedan ejecutar los programas llamados de aplicación.",
+        "iOS":" sistema operativo móvil de código cerrado desarrollado por Apple Inc. Originalmente desarrollado para el iPhone, después se utilizó en dispositivos como el iPod touch y el iPad."
+        }
+
+#Se comprueba la entrada en cadena de texto
+while True:
+
+    #Entrada de usuario en cadena de texto
+    entrada=str(input("¿Que sistema operativo desea consultar? "))
+
+    # se comprueba la entrada en el diccionario
+    if entrada in my_dic:
+
+        #Variable nueva donde se busca en el diccionario el concepto
+        concepto=my_dic[entrada]
+        print(f"el sistema operativo {entrada} es {concepto}")
+
+    #Si el concepto no se encuentra inprime el mensaje siguinte
+    else:
+        print("No se conoce el concepto")
+
+    #nueva entrada de usuario donde se pregunta el seguimiento del programa
+    entrada=str(input("¿Desea seguir con el programa? "))
+
+    # se comprueba  la entrada 
+    if entrada=="No":
+
+        #si se comprueba cierra el programa con este mensaje
+        print("Hasta la proxima consulta")
+        break
+
+    #Si no se comprueba sigue el programa
+    else:
+        print("seguimos con la consulta")
